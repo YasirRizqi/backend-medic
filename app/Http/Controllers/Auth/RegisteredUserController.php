@@ -19,7 +19,7 @@ class RegisteredUserController extends Controller
      * @throws \Illuminate\Validation\ValidationException
      */
    public function store(Request $request)
-{
+   {
     $request->validate([
         'name' => 'required|string|max:255',
         'email' => 'required|string|email|max:255|unique:users',
@@ -43,6 +43,6 @@ class RegisteredUserController extends Controller
         'token_type' => 'Bearer',
         'user' => $user,
     ]);
-}
+    }
 
 }
